@@ -65,11 +65,11 @@ def loginPage(request):
 
     return render(request, 'accounts/login.html', {'login_form': form})
 
-@login_required(login_url='/login')
-def index(request):
-    posts = Post.get_all_posts()
-    followers = list(Follower.objects.filter(user = request.user))
-    pass_followers = []
+# @login_required(login_url='/login')
+# def index(request):
+#     posts = Post.get_all_posts()
+#     followers = list(Follower.objects.filter(user = request.user))
+#     pass_followers = []
     for follower in followers:
         pass_followers.append(follower.username)
 
