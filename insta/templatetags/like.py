@@ -32,6 +32,6 @@ def liked_by(post_id):
         return likes[selected_no].username
         
 
-@register.simple_tag
-def others(post_id):
-    return len(Like.objects.filter(post = post_id)) -1
+# @register.simple_tag
+# def others(post_id):
+#     return len(Like.objects.filter(post = post_id)) -1
