@@ -8,15 +8,15 @@ User = get_user_model()
 
 register = template.Library()
 
-@register.simple_tag
-def to_follow(user_id):
-    user = User.objects.get(id = user_id)
-    user_followers = Follower.objects.filter(user= user_id).exists()
-    print(Follower.objects.filter(user= user_id))
-    print(user_followers)
-    if user_followers:
-        user_followers = Follower.objects.filter(user= user).exists()
-        users = User.objects.exclude(id = user_id).exclude(follower = user_followers)
+# @register.simple_tag
+# def to_follow(user_id):
+#     user = User.objects.get(id = user_id)
+#     user_followers = Follower.objects.filter(user= user_id).exists()
+#     print(Follower.objects.filter(user= user_id))
+#     print(user_followers)
+#     if user_followers:
+#         user_followers = Follower.objects.filter(user= user).exists()
+#         users = User.objects.exclude(id = user_id).exclude(follower = user_followers)
     else:
         users = User.objects.exclude(id = user_id)
     print(users)
