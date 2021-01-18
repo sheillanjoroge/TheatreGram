@@ -5,9 +5,9 @@ from django.db.models.signals import post_save
 
 User =  get_user_model()
 
-# class Profile(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     profile_image = models.ImageField(upload_to = 'profiles/')
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_image = models.ImageField(upload_to = 'profiles/')
 
 
 class Post(models.Model):
