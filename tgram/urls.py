@@ -1,4 +1,4 @@
-"""tgram URL Configuration
+""" URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from insta.views import registerPage, loginPage, show_post
 
-# urlpatterns = [
-#     url('admin/', admin.site.urls),
-#     url(r'^register', registerPage, name='register'),
-#     url(r'^login', loginPage, name='login'),
-#     url('', include('insta.urls') ), 
-#     url(r'^profile', include('insta.urls')),
-#     url(r'^upload', include('insta.urls')),
-#     url(r'^post/(\d)/', include('insta.urls')),
+urlpatterns = [
+    url('admin/', admin.site.urls),
+    url(r'^register', registerPage, name='register'),
+    url(r'^login', loginPage, name='login'),
+    url('', include('insta.urls') ), 
+    url(r'^profile', include('insta.urls')),
+    url(r'^upload', include('insta.urls')),
+    url(r'^post/(\d)/', include('insta.urls')),
 ]
