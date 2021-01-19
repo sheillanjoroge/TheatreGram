@@ -12,6 +12,9 @@ A user can:
 * Upload your their own posts
 * Follow their favorite creaters.
 
+### Project Image
+![image](https://user-images.githubusercontent.com/70701845/105012474-3e5b0200-5a4f-11eb-9276-e95a5ce7563a.png)
+
 ## Setup/Installation Requirements
 
 ### Requirements
