@@ -7,7 +7,7 @@ from .models import Post, Follower, Like, Profile, Comment
 
 class Test_Profile(TestCase):
     def setUp(self):
-        self.user = User.objects.create(username = 'kishy', email = 'kishy.gikish@gmail.com', password='123@Iiht')
+        self.user = User.objects.create(username = 'kishy', email = 'sheillan@gmail.com', password='123@Iiht')
 
         self.image_profile = SimpleUploadedFile("file.jpg", b"file_content", content_type="image/jpg")
         self.profile = Profile(user=self.user, profile_image = self.image_profile)
@@ -22,7 +22,7 @@ class Test_Profile(TestCase):
 
         self.assertEqual(len(users), 1)
         self.assertEqual(users[0].username, 'kishy')
-        self.assertEqual(users[0].email, 'kishy.gikish@gmail.com')
+        self.assertEqual(users[0].email, 'sheillan@gmail.com')
 
 
     def test_profile_create(self):
@@ -37,10 +37,10 @@ class Test_Profile(TestCase):
 class TestPost(TestCase):
 
     def setUp(self):
-        self.user = User.objects.create(username = 'kishy', email = 'kishy.gikish@gmail.com', password='123@Iiht')
+        self.user = User.objects.create(username = 'kishy', email = 'sheillan@gmail.com', password='123@Iiht')
 
         self.image_post = SimpleUploadedFile("photo.jpg", b"file_content", content_type="image/jpg")
-        self.post = Post(user = self.user, post_image = self.image_post, post_description = 'Oluwa Burna' )
+        self.post = Post(user = self.user, post_image = self.image_post, post_description = 'Sharpeny' )
         self.post.save()
         self.user.post = self.post
         self.user.save()
@@ -49,7 +49,7 @@ class TestPost(TestCase):
     def test_post_create(self):
         self.assertNotEqual(self.user.post.post_image, None )
         self.assertEqual(self.user.post.post_image.name, 'posts/photo.jpg')
-        self.assertEqual(self.user.post.post_description, 'Oluwa Burna')
+        self.assertEqual(self.user.post.post_description, 'Sharpeny')
       
 
     def test_get_all_posts(self):
@@ -70,7 +70,7 @@ class TestPost(TestCase):
 
 class TestFollower(TestCase):
     def setUp(self):
-        self.user = User.objects.create(username = 'kishy', email = 'kishy.gikish@gmail.com', password='123@Iiht')
+        self.user = User.objects.create(username = 'kishy', email = 'sheillan@gmail.com', password='123@Iiht')
         self.user2 = User.objects.create(username = 'Grish', email = 'grish@gmail.com', password='123@Iiht')
         
             
@@ -84,7 +84,7 @@ class TestFollower(TestCase):
 
 class TestLike(TestCase):
     def setUp(self):
-        self.user = User.objects.create(username = 'kishy', email = 'kishy.gikish@gmail.com', password='123@Iiht')
+        self.user = User.objects.create(username = 'kishy', email = 'sheillan@gmail.com', password='123@Iiht')
 
         self.image_post = SimpleUploadedFile("photo.jpg", b"file_content", content_type="image/jpg")
         self.post = Post(user = self.user, post_image = self.image_post, post_description = 'Oluwa Burna' )
@@ -108,7 +108,7 @@ class TestLike(TestCase):
 
 class TestComment(TestCase):
     def setUp(self):
-        self.user = User.objects.create(username = 'kishy', email = 'kishy.gikish@gmail.com', password='123@Iiht')
+        self.user = User.objects.create(username = 'kishy', email = 'sheillan@gmail.com', password='123@Iiht')
 
         self.image_post = SimpleUploadedFile("photo.jpg", b"file_content", content_type="image/jpg")
         self.post = Post(user = self.user, post_image = self.image_post, post_description = 'Oluwa Burna' )
@@ -118,12 +118,12 @@ class TestComment(TestCase):
         
             
     def test_create_like(self):
-        self.comment = Comment(username = self.user.username, comment= 'Wow that is a beautiful babe!')
+        self.comment = Comment(username = self.user.username, comment= 'SlayFarming!')
         self.comment.save()
         self.comment.post.add(self.post)
         self.assertEqual(len(Comment.objects.all()), 1)
         self.assertEqual(Comment.objects.all()[0].username, 'kishy')
-        self.assertEqual(Comment.objects.all()[0].comment, 'Wow that is a beautiful babe!')
+        self.assertEqual(Comment.objects.all()[0].comment, 'SlayFarming!')
 
 
     def tearDown(self):
