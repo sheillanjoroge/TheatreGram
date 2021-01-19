@@ -1,19 +1,21 @@
 # TheatreGram
 
-Instagram. Only better...-ish.
+Instagram clone
 
 #### By **Sheilla Njoroge**
 
 ## Description
 
 A user can:
+* Login with a password not less than 8 charaters.
 * View posts from other users.
 * Like and comment on people's posts.
 * Upload your their own posts
 * Follow their favorite creaters.
 
 ### Project Image
-![image](https://user-images.githubusercontent.com/70701845/105032856-67d45780-5a68-11eb-9e8f-ee778b78024d.png)
+![image](https://user-images.githubusercontent.com/70701845/105082819-2910c280-5aa5-11eb-8190-6b9d741483a5.png)
+![image](https://user-images.githubusercontent.com/70701845/105082881-3e85ec80-5aa5-11eb-8035-da085476c7e9.png)
 
 ## Setup/Installation Requirements
 
