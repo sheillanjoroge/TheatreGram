@@ -13,7 +13,7 @@ A user can:
 * Follow their favorite creaters.
 
 ### Project Image
-![image](https://user-images.githubusercontent.com/70701845/105012474-3e5b0200-5a4f-11eb-9276-e95a5ce7563a.png)
+![image](https://user-images.githubusercontent.com/70701845/105014933-0dc89780-5a52-11eb-861c-35f5e55ad2e0.png)
 
 ## Setup/Installation Requirements
 
