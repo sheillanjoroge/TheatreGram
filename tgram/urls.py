@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from insta.views import registerPage, loginPage, show_post
+from django.contrib.auth import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^register', registerPage, name='register'),
     url(r'^login', loginPage, name='login'),
+    url(r'^logout/$', views.logout, {"next_page": '/'}),
     url('', include('insta.urls') ), 
     url(r'^profile', include('insta.urls')),
     url(r'^upload', include('insta.urls')),

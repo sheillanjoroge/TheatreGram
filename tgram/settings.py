@@ -20,6 +20,7 @@ from decouple import config,Csv
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
+
 # development
 # if config('MODE')=="dev":
 # DATABASES = {
@@ -36,14 +37,14 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # }
 # production
 # else:
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
@@ -61,8 +62,8 @@ SECRET_KEY = 'iza8=i++j7+v1d^6xx)wvfid+a9c!&dmk@)ltei4w0+*&g-lx@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '127.0.0.1']
-
+# ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 # Application definition
 
